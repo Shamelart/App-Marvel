@@ -1,7 +1,9 @@
 .search {
     display: flex;
     justify-content: left;
-    justify-content: first baseline;    
+    margin-top: 160px;
+    margin-left: 30px;
+
 
     .search-container {
         #search-input {
@@ -13,20 +15,25 @@
             font-size: 26px;
             box-sizing: border-box;
         }
+
+        .search-title {
+            font-size: 30px;
+        }
     }
 
     .filter-container {
         margin: 5.5em 0em 0em 10em;
         padding-right: 100px;
+        padding-bottom: 30px;
         font-size: 15px bold;
         font-weight: 1000;
-       
+
 
         #search-type {
             border: none;
             margin-right: 150px;
             padding-left: 15px;
-           
+
         }
 
         #search-orden {
@@ -34,15 +41,76 @@
             margin-right: 10px;
             padding-left: 15px;
             font-size: 15px bold;
-            
+
         }
     }
 
     #search-button {
         margin: 5.5em 0em 5em 0em;
         border-radius: 5px;
-        background: black;
+        background-color: black;
+
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .search {
+        display: flex;
+        flex-direction: column;
+        margin-top: 160px;
+        margin-left: 10px;
+
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            padding-right: 100px;
+            padding-top: 3px;
+
+            #search-type {
+                border: none;
+                margin-right: 15px;
+                padding-left: 5px;
+
+            }
+        }
+
+        #search-button {
+            margin: 0em 0em 5em 0em;
+            border-radius: 5px;
+            text-align: center;
+            background-color: red;
+        }
+    }
+}
 
 
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .search {
+        display: flex;
+        flex-direction: column;
+        margin-top: 160px;
+        margin-left: 10px;
+
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            padding-right: 100px;
+            padding-top: 3px;
+
+            #search-type {
+                border: none;
+                margin-right: 15px;
+                padding-left: 5px;
+
+            }
+        }
+
+        #search-button {
+            margin: 0em 0em 5em 0em;
+            border-radius: 5px;
+            text-align: center;
+            background-color: red;
+        }
     }
 }

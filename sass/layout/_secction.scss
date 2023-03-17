@@ -1,4 +1,17 @@
 .results-section {
+    margin-left: 20px;
+
+    h2 {
+
+        margin: 0 0 20px 50px;
+        font-size: 20px;
+    }
+
+    p {
+        margin-left: 50px;
+        font-size: 18px;
+    }
+
     .results {
         display: flex;
         flex-wrap: wrap;
@@ -12,8 +25,8 @@
             cursor: pointer;
 
             .comic-img-container {
-
-                height: 430px;
+                height: 300px;
+                width: 200px;
                 display: flex;
                 flex-direction: column;
                 margin: 12px;
@@ -21,7 +34,9 @@
                 border-bottom: 4px solid #ed1d23;
                 overflow: hidden;
 
-
+                .comic-img:hover {
+                    transform: scale(1.5);
+                }
 
                 .comic-img {
                     width: 250px;
@@ -45,6 +60,45 @@
             }
         }
     }
+}
+
+.container {
+    .card-detalle-contenedor {
+        display: flex;
+
+        .card-comic-detalle-contenedor {
+            display: flex;
+
+            .comic-img-contenedor {
+
+                .comic-img {
+                    width: 300px;
+                    height: 400px;
+                    margin-left: 100px;
+                }
+
+              
+            }
+
+            .comic-contenido-contenedor {
+                margin-left: 80px;
+                font-size: 20px;
+                margin-top: 5px;
+
+                h3 {
+                    margin-bottom: 5px;
+                    font-size: 22px;
+                }
+            }
+
+        }
+    }
+
+    .comic-title {
+        font-size: 1em;
+        text-align: center;
+    }
+
 }
 
 .pages {
@@ -72,5 +126,132 @@
     .desactived {
         color: rgba(128, 128, 128, 0.488);
         background-color: black;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    comic-img-container {
+        height: 700px
+    }
+
+    .results-section {
+        .results {
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            justify-content: center;
+
+
+            .comic {
+                h3 {
+                    font-size: 15px;
+                    padding-bottom: 60px;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    .container {
+        .card-detalle-contenedor {
+            display: flex;
+
+            .card-comic-detalle-contenedor {
+                display: flex;
+                justify-content: center;
+
+                .comic-img-contenedor {
+
+                    .comic-img {
+                        width: 200px;
+                        height: 250px;
+                        margin-left: 80px;
+                    }
+                }
+
+                .comic-contenido-contenedor {
+                    margin-left: 80px;
+                    font-size: 15px;
+
+
+                    h3 {
+                        margin-bottom: 5px;
+                        font-size: 22px;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    comic-img-container {
+        height: 700px
+    }
+
+    .results-section {
+        h2 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .results {
+            display: grid;
+            grid-template-columns: 50%;
+            justify-content: center;
+
+
+            .comic {
+                h3 {
+                    font-size: 15px;
+                    padding-bottom: 60px;
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    .container {
+        .card-detalle-contenedor {
+            display: flex;
+            width: 80%;
+            margin: auto;
+
+            .card-comic-detalle-contenedor {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .comic-img-contenedor {
+
+                    .comic-img {
+                        width: 100%;
+                        height: 250px;
+                        margin: auto;
+                    }
+                }
+
+                .comic-contenido-contenedor {
+                    margin-left: 80px;
+                    font-size: 15px;
+
+
+                    h3 {
+                        margin-bottom: 5px;
+                        font-size: 22px;
+                    }
+                }
+
+            }
+        }
+
     }
 }

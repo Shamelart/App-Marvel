@@ -313,15 +313,20 @@ p {
 }
 
 header {
-  display: flex;
-  justify-content: center;
   width: 100%;
-  background-color: black;
+  height: 150px;
 }
 header img {
-  width: 30%;
+  width: 100%;
+  height: 250px;
 }
 
+@media (min-width: 768px) {
+  .header {
+    height: 600px img;
+    height-width: 200px;
+  }
+}
 footer {
   width: 100%;
   padding: 30px 0 40px;
@@ -331,6 +336,17 @@ footer {
   text-align: center;
 }
 
+.results-section {
+  margin-left: 20px;
+}
+.results-section h2 {
+  margin: 0 0 20px 50px;
+  font-size: 20px;
+}
+.results-section p {
+  margin-left: 50px;
+  font-size: 18px;
+}
 .results-section .results {
   display: flex;
   flex-wrap: wrap;
@@ -343,13 +359,17 @@ footer {
   cursor: pointer;
 }
 .results-section .results .comic .comic-img-container {
-  height: 430px;
+  height: 300px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   margin: 12px;
   flex-grow: 1;
   border-bottom: 4px solid #ed1d23;
   overflow: hidden;
+}
+.results-section .results .comic .comic-img-container .comic-img:hover {
+  transform: scale(1.5);
 }
 .results-section .results .comic .comic-img-container .comic-img {
   width: 250px;
@@ -365,6 +385,31 @@ footer {
   color: black;
   text-transform: uppercase;
   height: 20px;
+}
+
+.container .card-detalle-contenedor {
+  display: flex;
+}
+.container .card-detalle-contenedor .card-comic-detalle-contenedor {
+  display: flex;
+}
+.container .card-detalle-contenedor .card-comic-detalle-contenedor .comic-img-contenedor .comic-img {
+  width: 300px;
+  height: 400px;
+  margin-left: 100px;
+}
+.container .card-detalle-contenedor .card-comic-detalle-contenedor .comic-contenido-contenedor {
+  margin-left: 80px;
+  font-size: 20px;
+  margin-top: 5px;
+}
+.container .card-detalle-contenedor .card-comic-detalle-contenedor .comic-contenido-contenedor h3 {
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+.container .comic-title {
+  font-size: 1em;
+  text-align: center;
 }
 
 .pages {
@@ -392,10 +437,90 @@ footer {
   background-color: black;
 }
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  comic-img-container {
+    height: 700px;
+  }
+  .results-section .results {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+  }
+  .results-section .results .comic h3 {
+    font-size: 15px;
+    padding-bottom: 60px;
+    margin-left: auto;
+  }
+  .container .card-detalle-contenedor {
+    display: flex;
+  }
+  .container .card-detalle-contenedor .card-comic-detalle-contenedor {
+    display: flex;
+    justify-content: center;
+  }
+  .container .card-detalle-contenedor .card-comic-detalle-contenedor .comic-img-contenedor .comic-img {
+    width: 200px;
+    height: 250px;
+    margin-left: 80px;
+  }
+  .container .card-detalle-contenedor .card-comic-detalle-contenedor .comic-contenido-contenedor {
+    margin-left: 80px;
+    font-size: 15px;
+  }
+  .container .card-detalle-contenedor .card-comic-detalle-contenedor .comic-contenido-contenedor h3 {
+    margin-bottom: 5px;
+    font-size: 22px;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  comic-img-container {
+    height: 700px;
+  }
+  .results-section h2 {
+    text-align: center;
+  }
+  .results-section p {
+    text-align: center;
+  }
+  .results-section .results {
+    display: grid;
+    grid-template-columns: 50%;
+    justify-content: center;
+  }
+  .results-section .results .comic h3 {
+    font-size: 15px;
+    padding-bottom: 60px;
+    margin-left: auto;
+  }
+  .container .card-detalle-contenedor {
+    display: flex;
+    width: 80%;
+    margin: auto;
+  }
+  .container .card-detalle-contenedor .card-comic-detalle-contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container .card-detalle-contenedor .card-comic-detalle-contenedor .comic-img-contenedor .comic-img {
+    width: 100%;
+    height: 250px;
+    margin: auto;
+  }
+  .container .card-detalle-contenedor .card-comic-detalle-contenedor .comic-contenido-contenedor {
+    margin-left: 80px;
+    font-size: 15px;
+  }
+  .container .card-detalle-contenedor .card-comic-detalle-contenedor .comic-contenido-contenedor h3 {
+    margin-bottom: 5px;
+    font-size: 22px;
+  }
+}
 .search {
   display: flex;
   justify-content: left;
-  justify-content: first baseline;
+  margin-top: 160px;
+  margin-left: 30px;
 }
 .search .search-container #search-input {
   border: 0;
@@ -406,9 +531,13 @@ footer {
   font-size: 26px;
   box-sizing: border-box;
 }
+.search .search-container .search-title {
+  font-size: 30px;
+}
 .search .filter-container {
   margin: 5.5em 0em 0em 10em;
   padding-right: 100px;
+  padding-bottom: 30px;
   font-size: 15px bold;
   font-weight: 1000;
 }
@@ -426,7 +555,58 @@ footer {
 .search #search-button {
   margin: 5.5em 0em 5em 0em;
   border-radius: 5px;
-  background: black;
+  background-color: black;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .search {
+    display: flex;
+    flex-direction: column;
+    margin-top: 160px;
+    margin-left: 10px;
+  }
+  .search .filter-container {
+    display: flex;
+    justify-content: center;
+    padding-right: 100px;
+    padding-top: 3px;
+  }
+  .search .filter-container #search-type {
+    border: none;
+    margin-right: 15px;
+    padding-left: 5px;
+  }
+  .search #search-button {
+    margin: 0em 0em 5em 0em;
+    border-radius: 5px;
+    text-align: center;
+    background-color: red;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .search {
+    display: flex;
+    flex-direction: column;
+    margin-top: 160px;
+    margin-left: 10px;
+  }
+  .search .filter-container {
+    display: flex;
+    justify-content: center;
+    padding-right: 100px;
+    padding-top: 3px;
+  }
+  .search .filter-container #search-type {
+    border: none;
+    margin-right: 15px;
+    padding-left: 5px;
+  }
+  .search #search-button {
+    margin: 0em 0em 5em 0em;
+    border-radius: 5px;
+    text-align: center;
+    background-color: red;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

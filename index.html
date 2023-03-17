@@ -22,7 +22,7 @@
 
 <body>
     <header>
-        <img src="./assets/imagenes/th (2).webp" alt="">
+        <img src="./sass/assets/imagenes/243409.webp" alt="">
     </header>
 
     <main>
@@ -31,8 +31,8 @@
                 <h2 class="search-title">Búsqueda</h2>
                 <i class="fas fa-search" aria-hidden="true"></i>
                 <input type="text" id="search-input" placeholder="Ingresa tu Búsqueda" aria-labelledby="search-title">
-               
             </div>
+
             <div class="filter-container">
                 <label for="search-type">TIPO</label>
                 <seLect id="search-type">
@@ -47,10 +47,13 @@
                     <option value="mas-viejos">Más Viejos</option>
                 </select>
             </div>
+
             <div id="search-button">
                 <button type="button" class="search-button">Buscar</button>
             </div>
         </section>
+
+        <section class="container"></section>
 
         <section class="results-section">
             <h2 class="results-title">Resultado</h2>
@@ -58,39 +61,21 @@
             <div class="results"></div>
         </section>
 
-        <div>
-            <section class="comic-section is-hidden">
-                <div class="comic-detail">
-
-                </div>
-            </section>
-
-            <section class="character-section is-hidden">
-                <div class="character-detail">
-
-                </div>
-            </section>
-
-            <section class="result-section is-hidden">
-                <h2 class="result-title">
-                    Personajes
-                </h2>
-                <div class="results-details"></div>
-            </section>
-        </div>
 
         <section class="pages">
-            <button class="init-page page-button"> << </button>
-            <button class="previus-page page-button"> < </button>
-            <button class="next-page page-button"> > </button>
-            <button class="last-page page-button"> >> </button>            
+            <button class="init-page page-button">
+                << </button>
+                    <button class="previus-page page-button">
+                        < </button>
+                            <button class="next-page page-button"> > </button>
+                            <button class="last-page page-button"> >> </button>
         </section>
 
 
     </main>
 
     <footer>
-
+        <p>Código realizado por Shamelart</p>
     </footer>
     <script src="./JS/main.js"></script>
 </body>
